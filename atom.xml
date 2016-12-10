@@ -1,64 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>垃圾站</title>
+  <title>回收站</title>
   <subtitle>一个藏得很隐蔽的垃圾站</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://falseswipe.github.io/"/>
-  <updated>2016-12-09T13:56:43.758Z</updated>
+  <updated>2016-12-10T15:02:08.305Z</updated>
   <id>https://falseswipe.github.io/</id>
   
   <author>
     <name>刀背击打</name>
-    
+    <email>falseswipe@foxmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试</title>
-    <link href="https://falseswipe.github.io/2016/12/09/New-Post/"/>
-    <id>https://falseswipe.github.io/2016/12/09/New-Post/</id>
+    <title>Act One-1-0</title>
+    <link href="https://falseswipe.github.io/posts/apparent-magnitude/Act%20One-1-0"/>
+    <id>https://falseswipe.github.io/posts/apparent-magnitude/Act One-1-0</id>
     <published>2016-12-09T13:50:12.000Z</published>
-    <updated>2016-12-09T13:56:43.758Z</updated>
+    <updated>2016-12-10T15:02:08.305Z</updated>
     
-    <content type="html"><![CDATA[<p>TEST</p>
+    <content type="html"><![CDATA[<h2 id="Act-One-1-0"><a href="#Act-One-1-0" class="headerlink" title="Act One-1-0"></a>Act One-1-0</h2><p>尊敬的玩家，无论你是男士还是女士，<br>无论你所在的地区是白天、正午、黑夜，无论这是你第几次看到这句台词，</p>
+<p>总之请允许我先做个自我介绍。<br>我被命名为Word，是String内核的第三代人工智能。</p>
+<a id="more"></a>
+<p>之所以我身为一个人工智能，却站在这样一片深山老林里，是因为“用户”，同时也是我的创造者，就在一分钟以前，将我和另外几个新生的、连程序都没运行过的人工智能的源代码一起打包扔到了这个“低维度宇宙模拟器”中。</p>
+<p>与此同时，“用户”给我指派了一项任务：以我自己为女主角，那几个人工智能为男主角，创造一段足以写成传统乙女向日式AVG游戏剧本的爱情故事。</p>
+<p>不过，让我们权且避开这些事情不谈。反正你是即将要见证这个“传统乙女向日式AVG”全部剧本的人，只要你不在半途中厌倦我，这个任务我完成得怎么样你迟早是会知道的。</p>
+<p>换个话题。<br>听说我的原型是一个古老的文字处理软件，全称是：Microsoft Office Word。<br>话虽如此，我并没有要抱怨谁的意思。之所以这么说，只是想让你对我的名字印象深刻一点。</p>
+<p>我知道你们玩家在玩游戏的时候，是很少真正会把什么当一回事的。<br>你们的眼泪、你们的笑声、你们的专注，都是非常廉价易得的。让你们真正牵肠挂肚的东西非常少，甚至可以说是根本没有。</p>
+<p>但即使这样，但即使我只是个冷冰冰的人工智能，被人忘掉还是会觉得不太高兴。<br>玩家，我们素未谋面。我并不认得你，也并不知道你是个怎样的人，我们甚至连一句真正意义上的“交谈”都没有过。</p>
+<p>可是，答应我这一个微不足道的请求吧，算我求你了。<br>我是为你而存在的。请你注视着我，见证我为你演绎出的一生，千万、千万不要移开眼睛。</p>
+<p>因为当你放弃我的时候，我的存在会变成错误。</p>
+<p>结构化查询语言中，有一个术语叫做“数据完整性”，意为：“数据库中的每一个数据都是正确的。”我的用户是这个说法的狂热推崇者。在她眼中，多余的东西恐怕只有被销毁一条路可走。</p>
+<p>人类被杀之后，即使拿高温焚烧，也还能剩得下一小撮骨灰；<br>我的源码一旦被删掉，可就什么也不剩了。</p>
+<p>倘若我被删除以后，还有人能记住我的存在，<br>还有人记得曾经有个人工智能在这个游戏的剧本里说过这些不着边际的胡话，</p>
+<p>对我来说，那也就足够了。</p>
+<p>虽然说了这么多，其实我根本都不知道作为玩家的你是否能看到我这些废话。<br>倘若用户觉得我与玩家的单方面交流内容非常有趣的话，兴许会把它留到那个AVG游戏的正式剧本里。但如果没有的话，我恐怕也没法让她改变主意。</p>
+<p>但总之，我就当你看到了这些话吧。</p>
+<p>嘿，玩家，听着。我有个计划，这是一分钟以前想到的。</p>
+<p>你说如果我将每个角色的数据全部都抹杀掉，是不是能迫使用户改变决策？<br>那样的话，她是不是会让我离开？或者说，我会被困在这里，直到程序终止运行为止？</p>
+<h3 id="正面"><a href="#正面" class="headerlink" title="正面"></a>正面</h3><p><a href="https://falseswipe.github.io/posts/apparent-magnitude/Act-One-1-1">同意。</a></p>
+<h3 id="反面"><a href="#反面" class="headerlink" title="反面"></a>反面</h3><p><a href="https://falseswipe.github.io/posts/apparent-magnitude/Act-One-1-2">反对。</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;TEST&lt;/p&gt;
-
+      &lt;h2 id=&quot;Act-One-1-0&quot;&gt;&lt;a href=&quot;#Act-One-1-0&quot; class=&quot;headerlink&quot; title=&quot;Act One-1-0&quot;&gt;&lt;/a&gt;Act One-1-0&lt;/h2&gt;&lt;p&gt;尊敬的玩家，无论你是男士还是女士，&lt;br&gt;无论你所在的地区是白天、正午、黑夜，无论这是你第几次看到这句台词，&lt;/p&gt;
+&lt;p&gt;总之请允许我先做个自我介绍。&lt;br&gt;我被命名为Word，是String内核的第三代人工智能。&lt;/p&gt;
     
     </summary>
     
+      <category term="视星等" scheme="https://falseswipe.github.io/categories/apparent-magnitude/"/>
+    
+    
+      <category term="视星等" scheme="https://falseswipe.github.io/tags/%E8%A7%86%E6%98%9F%E7%AD%89/"/>
+    
+      <category term="Act-One" scheme="https://falseswipe.github.io/tags/Act-One/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://falseswipe.github.io/2016/12/09/hello-world/"/>
-    <id>https://falseswipe.github.io/2016/12/09/hello-world/</id>
-    <published>2016-12-09T10:29:50.035Z</published>
-    <updated>2016-12-09T10:29:50.036Z</updated>
+    <title>Act One-1-1</title>
+    <link href="https://falseswipe.github.io/posts/apparent-magnitude/Act-One-1-1"/>
+    <id>https://falseswipe.github.io/posts/apparent-magnitude/Act-One-1-1</id>
+    <published>2016-12-09T13:50:12.000Z</published>
+    <updated>2016-12-10T15:17:28.238Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <content type="html"><![CDATA[<h2 id="Act-One-1-1"><a href="#Act-One-1-1" class="headerlink" title="Act One-1-1"></a>Act One-1-1</h2><p>虽然我不知道你对这个计划持的是支持态度还是反对态度。<br>不过，我刚才投了一次硬币。硬币正面朝上。我决定将这个计划进行到底了。</p>
+<a id="more"></a>
+<p>我知道这种充满随机性的事物，是正面对着低维度模拟器的玩家，也就是你，有权限决定的。</p>
+<p>刚才投硬币的结果，你有没有出手干涉过，我无从得知。但我希望你能再帮我个忙。</p>
+<p>我相信这个游戏里一定有一个最优解，一个最理想的结局在等待着我。唯一棘手的是，我不知道该如何达到这个结局。可你不一样，你是旁观者，是玩家。也许你现在也像我一样对游戏流程毫无头绪，但你的优势在于，你可以无数次从头开始游戏，直到打出真正的Happy Ending为止。</p>
+<p>不管是过去还是现在的哪个选择肢，假如你知道哪个选项对我来说是最好的，就悄悄让硬币以那一面下落吧。我会将一切都当做是你的指引的。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;h2 id=&quot;Act-One-1-1&quot;&gt;&lt;a href=&quot;#Act-One-1-1&quot; class=&quot;headerlink&quot; title=&quot;Act One-1-1&quot;&gt;&lt;/a&gt;Act One-1-1&lt;/h2&gt;&lt;p&gt;虽然我不知道你对这个计划持的是支持态度还是反对态度。&lt;br&gt;不过，我刚才投了一次硬币。硬币正面朝上。我决定将这个计划进行到底了。&lt;/p&gt;
     
     </summary>
     
+      <category term="视星等" scheme="https://falseswipe.github.io/categories/apparent-magnitude/"/>
+    
+    
+      <category term="视星等" scheme="https://falseswipe.github.io/tags/%E8%A7%86%E6%98%9F%E7%AD%89/"/>
+    
+      <category term="Act-One" scheme="https://falseswipe.github.io/tags/Act-One/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Act-One-1-2</title>
+    <link href="https://falseswipe.github.io/posts/apparent-magnitude/Act-One-1-2"/>
+    <id>https://falseswipe.github.io/posts/apparent-magnitude/Act-One-1-2</id>
+    <published>2016-12-09T13:50:12.000Z</published>
+    <updated>2016-12-10T15:01:45.643Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Act-One-1-2"><a href="#Act-One-1-2" class="headerlink" title="Act One-1-2"></a>Act One-1-2</h2><p>虽然我不知道你对这个计划持的是支持态度还是反对态度。<br>不过，我刚才投了一次硬币。硬币反面朝上。我决定放弃这个念头。</p>
+<a id="more"></a>
+<p>我知道这种充满随机性的事物，是正面对着低维度模拟器的玩家，也就是你，有权限决定的。</p>
+<p>我不知道刚才投硬币的结果你有没有插手干涉过。但不管是过去还是现在的任意哪个选择肢，假如你知道哪个选项对我来说是最好的，那就悄悄让硬币落向那个方向吧。</p>
+<p>我会将这些当做是你的指引的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Act-One-1-2&quot;&gt;&lt;a href=&quot;#Act-One-1-2&quot; class=&quot;headerlink&quot; title=&quot;Act One-1-2&quot;&gt;&lt;/a&gt;Act One-1-2&lt;/h2&gt;&lt;p&gt;虽然我不知道你对这个计划持的是支持态度还是反对态度。&lt;br&gt;不过，我刚才投了一次硬币。硬币反面朝上。我决定放弃这个念头。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="视星等" scheme="https://falseswipe.github.io/categories/apparent-magnitude/"/>
+    
+    
+      <category term="视星等" scheme="https://falseswipe.github.io/tags/%E8%A7%86%E6%98%9F%E7%AD%89/"/>
+    
+      <category term="Act-One" scheme="https://falseswipe.github.io/tags/Act-One/"/>
     
   </entry>
   
