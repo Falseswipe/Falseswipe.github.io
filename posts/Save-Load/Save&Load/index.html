@@ -1,0 +1,857 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="BL,游戏梗," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="回收站" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Load to which file?放飞自我搞出来的玩家/NPC，写不动了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Save&Load">
+<meta property="og:url" content="https://falseswipe.github.io/posts/Save-Load/Save&Load/index.html">
+<meta property="og:site_name" content="回收站">
+<meta property="og:description" content="Load to which file?放飞自我搞出来的玩家/NPC，写不动了。">
+<meta property="og:updated_time" content="2017-02-14T07:13:01.356Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Save&Load">
+<meta name="twitter:description" content="Load to which file?放飞自我搞出来的玩家/NPC，写不动了。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://falseswipe.github.io/posts/Save-Load/Save&Load/"/>
+
+
+
+
+
+  <title> Save&Load | 回收站 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">回收站</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一个藏得很隐蔽的垃圾站</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://falseswipe.github.io/posts/Save-Load/Save&Load/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="刀背击打">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="回收站">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="回收站" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Save&Load
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-23T21:00:00+08:00">
+                2016-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Save-Load/" itemprop="url" rel="index">
+                    <span itemprop="name">Save&Load</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/posts/Save-Load/Save&Load/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="posts/Save-Load/Save&Load/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Load-to-which-file"><a href="#Load-to-which-file" class="headerlink" title="Load to which file?"></a>Load to which file?</h4><p>放飞自我搞出来的玩家/NPC，写不动了。</p>
+<a id="more"></a>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>菲特里克·普雷尔的死讯，是从那一天起传播开来的。<br>普雷尔是个谦虚温和，并且无论在什么方面都格外才华横溢的人，说得不客气点，大概就是那种长了脚会走路的“传说”的单词释义。</p>
+<p>我与他有些交情。他看我是以什么眼光来看，我不敢妄加揣测；但我看他时，就像在注视太阳一样。光芒万丈、灼热异常，乃至于到了刺眼的地步。</p>
+<p>我跪倒在那样的存在面前，无处遁形。</p>
+<p>太阳会有停止燃烧的一天吗？我并不清楚。那是只有占星师才喜欢研究的问题。<br>但是他确切的死讯宛若利矛，将我的喉咙捅了个对穿。我甚至觉得可笑，心中产生了那种现实与预期差距过大而造成的巨大荒谬感。</p>
+<p>那一阵子的安谢尔提，我不知道该怎么形容，能想到的最贴切的例子，就是它仿佛是篝火燃尽以后，余下的毫无生气的焦炭。只要伸出食指和拇指稍微撵一下，就会变成黑色的粉尘，落到地上。起码对我来说，的确已经没什么意思了。</p>
+<p>亲眼见到他尸骨的一伙年轻骑士在百般无奈之下，只好将菲特里克还算完好的一条手臂带回来给我。因为我是他最好的朋友——至少在别人眼中如此——而这是他最后的遗物。</p>
+<p>菲特里克的死法实在太刁钻，连具全尸也不肯示人。<br>我不知道该对此作何评价，只是听那些人说，尸体被发现时，他全身大半部分的血肉都开裂了，骨骼如同去皮橘子的果肉一样，从里面脱落出来。空气里蔓延着恼人的腐臭味。地面上仅剩下一些既稀碎又恶心、让人没心情辨认的东西。</p>
+<p>在那种环境下，他们无法驻足太久，就给他在那里简略地做了个葬礼。<br>没有花，没有挽歌，没有哀悼词。有的只是几个流着泪的年轻人，朝一滩腥臭的尸肉毕恭毕敬地行了个骑士礼。那场面必然很好笑，是那种光是想到就能嗤嗤地笑出声来的好笑。</p>
+<p>很多事都是这样，如果跟自己毫无瓜葛的话，光看表象，应该都是很好笑的。<br>但在听他们叙述的过程中，我也不慎流了眼泪。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>我见到那条手臂时——说是臂骨和手骨更加合适——它全然与某种危险的荧光植物紧密地黏在了一起。看起来听渗人的，好在没有太奇怪的味道。那是他的右手臂，手骨的指骨上戴了一枚戒指。</p>
+<p>我将它取了下来，看见戒指上镶嵌的红色记忆水晶闪了闪光。<br>那是一段微弱的笑声。</p>
+<p>普雷尔曾告诉我，他在那颗水晶里预先录了一句话。那句话在他活着时是个秘密，只有死后才会被人们所知晓。看来他在死前改变了主意，打算把那个秘密永远留在声带溃烂的喉腔里。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>那天夜里，我梦见了很多过去的事。与其说菲特里克是个圣骑士，不如说他是个先知、预言者更为精准一些。他总像是早就对一切都稔熟于心。我从没见到他露出任何，除“笑容”之外的表情。</p>
+<p>礼拜堂里来祷告的人非常多。我也是其中之一。他没有自己的墓地。因为他的尸体已经腐烂不堪、渗入到我们脚踏着的土地里去。没有人知道他住在哪里，所以连衣冠冢也没得做了。人们只好在这里祷告。</p>
+<p>他们都相信菲特里克·普雷尔是神派遣的使者，专程为安谢尔提带来福音。神使在人间的载体突兀死去，是由于要响应天神崇高无上的召唤，片刻不得延误。</p>
+<p>或许真是那么回事吧。我下意识地伸出手，摸索着自那时起就一直戴在右手的戒指。<br>几缕苍白的阳光透过礼拜堂的花窗玻璃，照到了红水晶上，反射出一道纯净、圣洁、使人感到宽慰的光芒。</p>
+<p>我抛弃心中的杂念，不作声地念起祷言。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>“嘿，你一定认错人了，”其中一个见习牧师抬头看向我，诧异地说，“菲特里克？我从没听说过这个名字。”</p>
+<p>我愣了一下，不动声色地把右手放在了背后。这是某种恶作剧吗？如果是的话，他们高超的欺诈技巧确实骗到我了；如果不是的话，以所有我能想到神灵的名义，这到底是个什么情况？<br>这人昨天还因为菲特里克的死而在祷告时哭得肝肠寸断，险些拿我的袍袖擦眼泪鼻涕，结果现在居然……表现得像什么也没有发生过一样。</p>
+<p>我回想起自己房间里的日历。<br>一定是有什么地方出错了，我这样告诉自己。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>距离那一天又过了很久，久到足以让我平和地接受这一切，并对眼下的这个状况下一个定论。</p>
+<p>我所处的世界，不知道是出于什么原因，时间回溯到了两年以前。这听起来非常不切实际，如果放在几天以前，我大概无论如何也不肯相信。但这么多件事摆在我的面前，我即使想否认也很难做到。</p>
+<p>除我以外，所有人的记忆都被某种力量在无形中消除掉了。<br>没有令人尊敬的圣骑士菲特里克·普雷尔，没有他数不清的成就，没有赞美词，甚至没有一句哀悼。</p>
+<p>因为他们什么也不记得了。</p>
+<p>更令我疑惑的是，在这个时间段，菲特里克·普雷尔应该已经来到了安谢尔提，但他却没有。</p>
+<p>可是为什么？如果这只是普通的时光回溯，那么我大概仅仅会在以后将发生过的事再经历一次而已。如此说来，菲特里克又在哪儿呢？他就像消失了一样，我听不到有任何人提到这个名字。这完全讲不通啊。</p>
+<p>我这几天一直很不好过，差点被自己折腾到精神错乱，甚至开始自我怀疑，怀疑那些“未来发生的事”不过是我的妄想。菲特里克·普雷尔这个人太过完美了，让人一度觉得他只是我的憧憬与野心在梦境中的投影，从始至终就没有存在过。</p>
+<p>如果不是那枚戒指还在的话……我是撑不到现在的。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>有谁的手绞住了我的喉咙。<br>我没法呼吸。视线所及之处，一切事物褪色泛灰。</p>
+<p>我醒了过来，从脖子到前额都汗津津的。我平复着自己的呼吸，察觉到那只是个从门廊斜掠而过的、短暂至极的梦。死亡对于我来说，实在太遥远、太遥远了。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>做了那个梦之后，我有点没心思接着睡觉了。<br>正好在将要起身的前后脚，有人在外头敲了敲我的家门。</p>
+<p>我不知道确切的时间，但光靠猜也能猜得到，现在铁定是深夜了。有关于这个不请之客是谁这件事，我很没有头绪。但既然这人半夜三更选择敲门，而不是趁我睡着直接一把掐死我，就说明对方大概没什么恶意。即使有了恶意，也不过是——</p>
+<p>我想到这里，走过去打开了门。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>“……菲特里克？”</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>“说真的，其实我没想到你能认出我。”菲特里克随口说。<br>他似乎不是很熟悉我家的布局，四处张望试图找出把椅子，最后还是坐在了床边。<br>是的，他就像是变了一个人一样：不再披着沉甸甸的盔甲，没有拿武器，甚至连笑也不常见了。我其实也没认出他，完全是凭直觉蒙的，没想到真对了，也难怪他会惊讶。</p>
+<p>我沉默了一会儿，干巴巴地问：“这些事都是你折腾出来的？”<br>“你指什么？”</p>
+<p>我瞄了他一眼。那枚戒指已经不在了。</p>
+<p>“你应该已经死了，”我说，“早在那些人哭着递过你的臂骨之前，就已经死了。可如今没有人还记得你，没有人还记得你的死讯。因为现在是两年以前。”</p>
+<p>“是啊，是我做的。”他毫不避讳。<br>“为什么？”我忍不住问。</p>
+<p>将唾手可得的荣誉与鲜花抛到一边，将一切推翻重来，这很有趣吗？<br>他为什么要这么做？我想不明白。</p>
+<p>“因为这样比较好玩啊，”菲特里克说，“总是玩一条线路会很腻的。”<br>“抱歉，你刚才……说了什么？”</p>
+<p>普雷尔重复了一遍：“总是玩一条线路的话，会很腻的。”<br>他说这句话的时候，一直在看着我，像是想到了什么有趣的事，稍微有些得意地笑了出来。</p>
+<p>“这也就是我现在来找你的原因啦。”</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>我听了半天，这才理出一点头绪。</p>
+<p>人们总是在说：“人生是没法重来的。”<br>一旦你做了错的选择，就会一辈子被悔恨纠缠不休，无法回头。</p>
+<p>而对于菲特里克来说，事实则并非如此。</p>
+<p>对于他这种可以回溯时间、将所有人的记忆不着痕迹地扯回从前的人，无论是在什么地方，做出了什么决定，都没有差别。即使犯了天大的错，重新开始就是了。</p>
+<p>他将自己的未来，视作无数条可选的“线路”，走哪条完全看心情。对他来说，我所见证的那些鲜活的传说，不过是一切线路中再稀疏平常不过的一条。或许偶尔走一次还有点意思，但感到厌倦也是早晚的事。</p>
+<p>“你腻了和我有什么关系？”我简直莫名其妙。<br>“在此之前，你一直都是个普通的——”他说到这里时，很不自然地停顿了一下，“算了，换个说法吧：在此之前，你不知道我有这个本事。”</p>
+<p>但是这回不一样了。现在我知道了。<br>“哦，”我慢吞吞地说，“合着你把我这人反应当戏看。”</p>
+<p>“也不能这么说，”菲特里克像是听不出我语气中的挖苦一样，友好地纠正道，“你的反应，差不多算是流程中的小彩蛋吧。”</p>
+<p>“小彩蛋？”</p>
+<p>普雷尔反应过来以后，和我面面相觑。<br>他的表情十分一言难尽：“彩蛋的意思……你自己意会一下吧。”</p>
+<p>“但是你到底怎么想的，”我问，“大晚上的来串门？”<br>“我也不是故意的，只是到的时候正好是这个点。你居然没睡，这一点倒是让我很惊讶。”</p>
+<p>“做了个梦，当时正好刚醒。”我坦白。<br>菲特里克点头表示理解，又随口问了一句：“噩梦？”</p>
+<p>我含糊其辞：“算是吧。”</p>
+<p>“这种事经常发生？做了个噩梦，惊醒以后睡不着觉？”普雷尔说话的语气与其说是朋友之间的关切，不如说是纯粹的好奇。不过我并不感到奇怪。<br>不如说他从来没有把我当作真正的朋友对待这回事，我在很早以前就知道了。</p>
+<p>“算上今天这一回，统共五次。不算频繁。”在他再次发话之前，我又转移了话题，“你现在来找我到底是图个什么？就这么纯聊天？”</p>
+<p>“不完全是。我想来确认一件事。”<br>我还没来得及问，他就用某种锋利的东西割开了我的喉咙。我猜测那大概是一把短剑，毕竟他曾经是很喜欢使短剑的。我看着他，想说点什么，但是被不断涌出的血给呛住了。</p>
+<p>菲特里克似乎小声咕哝了些什么。<br>但令人遗憾的是，那些话究竟是什么内容，现如今我已经无从得知了。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>日历翻到了一个多月以前，比上次“时空回溯”到达的时间要延后了几天。我摸索着找到那条伤口原来的位置，脖子被生生割裂开来的痛觉久久不散。</p>
+<p>姑且先将普雷尔不明不白地杀了我的这件事放在一边，<br>我有一种预感，即使我真下了功夫研究，估计也得不出什么确切的结论。</p>
+<p>我一直以为菲特里克的那些有关于时空的伎俩，是将我三年后的身体扯回到了三年以前。因为只有这样，我那时的戒指仍然戴在手上的事实才讲得通。但刚才我险些身首分家，现在脖子上却连个疤也没留下。</p>
+<p>最令我不解的是，他的戒指还在。</p>
+<p>事情发展到这个地步，在经历过“挚友”之死、时间倒流、割喉和复活这一系列事件之后，我已经形容不出自己是个什么心情。这些事都是因何而起，我几乎也全然没心思忖度了。</p>
+<p>唯独普雷尔说过的那句话使我非常在意。他说他是为确认一件事而来。可他究竟想来确认什么呢？确认我是个活人，确认他的匕首能切开人肉，确认被割了气管的人的死亡现象？这样的假设我想了无数个，但没有一个听起来像那么回事儿的。</p>
+<p>在我窒息以前，看口型他还说了另一句话。至于其确切的内容，我实在是没有听清。得知他说的话，说不定能帮助我理清思路。但在现在，这是不可能的了。总之，我想，我暂时是找不到答案的。</p>
+<p>如果，我是说如果，下次再见到菲特里克的话，他也许会回答我的问题吧。</p>
+<p>至少我如此期望着。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>我“死后”没多久，菲特里克·普雷尔就来找我了。</p>
+<p>“说实话，”他评价道，“你这个人还是活着的时候比较有趣一点。”<br>“每个人都是。”我只能这么说。</p>
+<p>尸体当然是无趣的。同质化是无趣的近义词，而每个人的尸体大都是一个德行。<br>再没有比那更“同质化”的东西了。血液、骨骼、脏器、组织，差不多就是那些东西。</p>
+<p>谁的脑浆里也不会凭空蹦出跳着舞唱着歌的小仙女来。</p>
+<p>菲特里克没有和我争辩，或是继续这个话题，而是问：“你是不是很好奇？”<br>我点了点头。他打一开始就不该说那句话，不如从见了我第一面就直接把我脑袋削下来，这样还省得我想那么多的麻烦事儿。</p>
+<p>不过，这次我的好奇心一经爆发，就连我自己也感到莫名其妙。毕竟我平时并不是一个好奇心特别旺盛的人，这不是我的作风。</p>
+<p>菲特里克·普雷尔先是以竖起的食指横在自己的脖颈前面，做了一个“划”的动作，紧接着又指向我戴着戒指的那只手。他微微笑着。</p>
+<p>我不知道他想说什么，但光看那笑容也猜得出，那一定不是很让人愉快的内容。</p>
+<p>“你不觉得奇怪吗？”</p>
+<p>不知何故，菲特里克显得十分雀跃。在整个说话的过程中，他的目光一直没有离开过我，似乎正专注地观察着我的反应。</p>
+<p>“你的气管被我的短剑切开。尸体的血顺着木制地板，渗到你那个地下储物间里。我甚至可以给你展示我留下来收藏的，你的一小节脊骨。在那时，你理应死得再彻底不过了吧？”</p>
+<p>“你或许没有概念，不过那样的死尸，即使是亡灵法师也没法复活。”</p>
+<p>“可是，现在的你还能呼吸，还能与我交谈，脊柱完好无损。身上连伤痕也没有。”<br>“是不是很荒诞？就仿佛是——这一切都完全不符合常理？”</p>
+<p>“因为这根本不是现实。在这里，你是没法要求一切按常理发展的。”<br>我看着他，手指碰到冰凉的金属指环，但很快就移开了。</p>
+<p>是的，是的，我早就意识到了。<br>我就像是，专门为了衬托他的优秀与卓越而被创造出来的，可怜的牺牲品。</p>
+<p>只有这样的环境下，时空回溯才有可能实现，<br>我记忆中那个传说般的“菲特里克·普雷尔”才有可能是真实的。</p>
+<p>也许我是有过这个念头的：</p>
+<p>菲特里克稍微凑近了一点，声音轻得宛若一阵风声。<br>“在你的印象里，我从来没有称呼过你，因为你根本没有名字。”</p>
+<p>凭什么他就能平白享受这一切，不需要任何代价，而我……<br>而我甚至什么也不是。</p>
+<p>“你差不多已经察觉了吧。”</p>
+<p>我是个多余的陪衬，连作为垫脚石都不够资格。<br>除此之外，我什么也不是。那就是我存在的全部意义了。</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>“这不过是个游戏，你也只是……游戏角色罢了。”</p>
+<p>·</p>
+<p>·</p>
+<p>·</p>
+<p>这就说得通了。</p>
+<p>如果一个世界完全是为某个人而创造出来的“游戏”的话，如果他是那个“玩家”的话，对于他来说，一切确实应该唾手可得。拥有像那样令人艳羡的人生，也绝非偶然。</p>
+<p>可是唯独有一点我想不明白。<br>我并不是特别的。我甚至没有一个可供称呼的名字。</p>
+<p>即使是按他的说法——在这个“游戏”的无数个“NPC”中——我也不是特殊的那一个。</p>
+<p>我道：“为什么要告诉我呢？为什么是我？”<br>“那些事都是你还没拿到戒指的时候发生的，你一定不记得了。我之前‘确认’的也正是这件事。不过我是不会告诉你的。你现在知道就没意思了，你说是吧。”</p>
+<p>“你现在知道就没意思了”？我如果没理解错的话，他这句话也就是说……<br>他想趁着这段时间，弄出什么让他觉得“有意思”的事来？</p>
+<p>菲特里克有一下没一下地把玩着手里的短剑。我猜测那大概是把我脖子抹了的那一把。与其说那是把玩，不如说是摆出副样子给我看的。</p>
+<p>在察觉到我的目光时，他朝我微微笑了一下。<br>只有在这时候，我才能在他身上见到一点昔日圣骑士的虚影。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/BL/" rel="tag"># BL</a>
+          
+            <a href="/tags/游戏梗/" rel="tag"># 游戏梗</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/chocolate-sandwich-biscuit/chocolate-sandwich-biscuit/" rel="prev" title="巧克力夹心饼干">
+                巧克力夹心饼干 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="posts/Save-Load/Save&Load/"
+           data-title="Save&Load" data-url="https://falseswipe.github.io/posts/Save-Load/Save&Load/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="刀背击打" />
+          <p class="site-author-name" itemprop="name">刀背击打</p>
+          <p class="site-description motion-element" itemprop="description">非常英俊，可能有自恋倾向</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5452192401/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Load-to-which-file"><span class="nav-number">1.</span> <span class="nav-text">Load to which file?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刀背击打</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"falseswipe"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
