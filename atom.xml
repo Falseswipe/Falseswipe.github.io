@@ -655,11 +655,19 @@
     <link href="https://falseswipe.github.io/posts/chocolate-sandwich-biscuit/chocolate-sandwich-biscuit/"/>
     <id>https://falseswipe.github.io/posts/chocolate-sandwich-biscuit/chocolate-sandwich-biscuit/</id>
     <published>2016-08-11T07:00:00.000Z</published>
-    <updated>2017-02-14T07:12:31.377Z</updated>
+    <updated>2017-08-08T11:52:41.604Z</updated>
     
     <content type="html"><![CDATA[<p>百合，甜而腻，剧情扯淡。放飞自我的产物。</p>
 <a id="more"></a>
-<p>1.</p>
+<p><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><br>&lt;!DOCTYPE html&gt;<html lang="en"><head></head></html></p>
+<p><meta charset="UTF-8"></p>
+<p><meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
+<p><meta http-equiv="X-UA-Compatible" content="ie=edge"></p>
+<p><title>Valine - A simple comment system based on Leancloud.</title></p>
+<p><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script></p>
+<p><script src="./dist/Valine.min.js"></script><br><body></body></p>
+<p><div class="comment"></div></p>
+<p><script><br>    new Valine({<br>        av: AV, // source from av-min.js<br>        el: ‘.comment’ ,<br>        app_id: ‘your appid’,<br>        app_key: ‘your appkey’,<br>        // [v1.0.7 new]留言框占位提示文字<br>        placeholder: ‘ヾﾉ≧∀≦)o来啊，快活啊!’<br>    });<br></script><br></p>
 <p>我喜欢上了一个人。</p>
 <p>2.</p>
 <p>她是女的，这没什么问题。<br>问题是我也是女的。</p>
@@ -918,11 +926,11 @@
       <category term="巧克力夹心饼干" scheme="https://falseswipe.github.io/categories/chocolate-sandwich-biscuit/"/>
     
     
+      <category term="现代" scheme="https://falseswipe.github.io/tags/%E7%8E%B0%E4%BB%A3/"/>
+    
       <category term="GL" scheme="https://falseswipe.github.io/tags/GL/"/>
     
       <category term="傻白甜" scheme="https://falseswipe.github.io/tags/%E5%82%BB%E7%99%BD%E7%94%9C/"/>
-    
-      <category term="现代" scheme="https://falseswipe.github.io/tags/%E7%8E%B0%E4%BB%A3/"/>
     
   </entry>
   
